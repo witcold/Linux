@@ -1,5 +1,8 @@
 #!/bin/bash
-# 4. Найти в директории файлы, группа-владелец которых содержит указанного пользователя и время с момента создания файла не более N минут. N передается параметром
+# Задача 1 (Простые команды)
+# 4. Найти в директории файлы, группа-владелец которых содержит указанного 
+# пользователя и время с момента создания файла не более N минут. N передается
+# параметром.
 origGroupsStr=$(groups $3)
 newGroupsStr=${origGroupsStr##$3 :}
 echo "All groups for "$3" : "$newGroupsStr"\nFiles which was modificate in last "$2" minutes and containings in "$1" and has owner one of this groups : "
