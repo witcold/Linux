@@ -2,13 +2,14 @@
 # Задача 5 (Функции)
 # Написать рекурсивную функцию.
 fib () {
-if $1 == 1 then
-  return 1;
-elif $1 == 2 then
-  return 1;
-else
-  return `fib ($1-1)` + `fib ($1-2)`
-fi
+  i=$1;
+  if test $i -eq 1; then
+    echo 1;
+  elif test $i -eq 2; then
+    echo 1;
+  else
+    echo $((`fib $((i-1))` + `fib $((i-2))`))
+  fi
 }
 
 echo `fib 2`;
