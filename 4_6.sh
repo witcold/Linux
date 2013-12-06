@@ -26,6 +26,7 @@ do
 done;
 rm 4.tmp;
 echo \\end {tabular} >> 4.tex;
+echo >> 4.tex;
 echo Total count: $count >> 4.tex;
 echo \\end {document} >> 4.tex;
-pdftex 4.tex;
+pdflatex 4.tex;
